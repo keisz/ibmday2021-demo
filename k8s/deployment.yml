@@ -30,3 +30,18 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 80
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: day2021demo-route
+spec:
+  host: >-
+    day2021demo.mycluster-satellite-8a7a030b7c73cc6a1bade95cb273562f-0000.upi.containers.appdomain.cloud
+  to:
+    kind: Service
+    name: ibmday2021demo-svc
+    weight: 100
+  port:
+    targetPort: 80
+  wildcardPolicy: None
