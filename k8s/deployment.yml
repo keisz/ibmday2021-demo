@@ -43,5 +43,5 @@ spec:
     name: ibmday2021demo-svc
     weight: 100
   port:
-    targetPort: 80
+    targetPort: 8080
   wildcardPolicy: None
