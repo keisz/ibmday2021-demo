@@ -33,3 +33,4 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ steps.meta.outputs.tags }}
+        tag_with_ref: true
